@@ -19,8 +19,8 @@
 # Charge tous les modules dans l'ordre défini
 # Ne modifiez pas l'ordre de chargement !
 
-# 1. Variables d'environnement
-source "$ZSH_CONFIG/core/00-env.zsh"
+# 1. Variables d'environnement (Chargées automatiquement par le loader .zshrc)
+# source "$ZSH_CONFIG/core/00-env.zsh" <-- SUPPRIMÉ (Redondant et buggé)
 # └─────────────────────────────────────────────────────────────────────────────┘
 
 typeset -a ZSH_MODULES
