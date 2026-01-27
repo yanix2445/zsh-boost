@@ -1,3 +1,9 @@
 .DS_Store
 *.log
 tmp/
+
+# Local config
+local/custom.zsh
+
+# Zsh dumps
+.zcompdump*
