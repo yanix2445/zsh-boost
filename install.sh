@@ -382,4 +382,3 @@ main() {
 }
 
 [[ -t 1 ]] && main || echo "Terminal requis"
-...
