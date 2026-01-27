@@ -1,0 +1,4 @@
+# Personnalisations locales (gitignored)
+local/
+.zcompdump*
+.zsh_history
