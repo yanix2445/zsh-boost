@@ -1,159 +1,21 @@
-# LICENCE PROPRIÉTAIRE NON-COMMERCIALE
-## Zsh Boost - Version 2.0
+MIT License
 
-**Date d'entrée en vigueur :** Janvier 2024  
-**Titulaire des droits :** Yanis (@yanix2445)  
-**Juridiction applicable :** France
+Copyright (c) 2024 Yanis (@yanix2445)
 
----
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-## PRÉAMBULE
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-Ce logiciel n'est PAS un logiciel open source au sens de l'Open Source Initiative (OSI).  
-Il s'agit d'un **logiciel propriétaire** distribué sous licence restrictive avec code source visible.
-
----
-
-## ARTICLE 1 — DÉFINITIONS
-
-**1.1 "Logiciel"** : L'ensemble du code source, de la documentation, des scripts, fichiers de configuration et ressources associées contenus dans ce dépôt, dans toutes ses versions passées, présentes et futures.
-
-**1.2 "Titulaire"** : Yanis (@yanix2445), auteur original et unique propriétaire de l'intégralité des droits patrimoniaux et moraux sur le Logiciel.
-
-**1.3 "Utilisateur"** : Toute personne physique ou morale accédant au Logiciel, le téléchargeant, le clonant, le modifiant, l'exécutant ou le distribuant.
-
-**1.4 "Usage Commercial"** : Constitue un usage commercial, de manière non limitative :
-- (a) Toute vente, location, sous-licence ou cession à titre onéreux du Logiciel ou d'un dérivé.
-- (b) Toute intégration du Logiciel dans un produit ou service faisant l'objet d'une transaction commerciale.
-- (c) Toute utilisation du Logiciel par une entité dont l'activité principale génère des revenus, y compris les entreprises, freelances, consultants et prestataires de services.
-- (d) Toute utilisation dans le cadre d'une activité professionnelle rémunérée, même si le Logiciel lui-même n'est pas vendu.
-- (e) Toute monétisation directe ou indirecte incluant mais non limitée à : publicité, abonnements, donations sollicitées, ou partenariats commerciaux.
-
-**1.5 "Usage Non-Commercial"** : Usage strictement personnel, éducatif ou de recherche académique non financée par des intérêts commerciaux, par une personne physique n'agissant pas dans le cadre d'une activité économique.
-
-**1.6 "Contribution"** : Tout apport au Logiciel, incluant mais non limité à : pull requests, patches, corrections de bugs, suggestions de code, documentation, issues, commentaires techniques, ou tout autre contenu soumis au dépôt.
-
----
-
-## ARTICLE 2 — OCTROI DE LICENCE (CONDITIONS)
-
-Sous réserve du respect **strict et cumulatif** de toutes les conditions énoncées dans la présente licence, le Titulaire accorde à l'Utilisateur une licence **non exclusive, non transférable, révocable** pour :
-
-- **2.1** Télécharger et exécuter le Logiciel pour un Usage Non-Commercial uniquement.
-- **2.2** Modifier le Logiciel pour ses besoins personnels, sans droit de distribution des modifications.
-- **2.3** Partager le Logiciel dans son intégralité, licence incluse et inmodifiée, à des tiers pour un Usage Non-Commercial.
-
-**Ces droits constituent des CONDITIONS de la licence et non de simples engagements contractuels.**  
-Toute violation d'une condition entraîne la **résiliation automatique et immédiate** de la licence et constitue une **violation des droits d'auteur** au sens des articles L.122-4 et L.335-2 du Code de la Propriété Intellectuelle.
-
----
-
-## ARTICLE 3 — RESTRICTIONS ABSOLUES
-
-**IL EST EXPRESSÉMENT INTERDIT, SOUS PEINE DE POURSUITES :**
-
-- **3.1** Tout Usage Commercial du Logiciel sans autorisation écrite préalable du Titulaire.
-- **3.2** La vente, location, sous-licence ou cession du Logiciel ou de tout dérivé.
-- **3.3** L'intégration du Logiciel dans un produit ou service commercial.
-- **3.4** La suppression, modification ou dissimulation de la présente licence ou des mentions d'attribution.
-- **3.5** La revendication de paternité ou de propriété sur le Logiciel.
-- **3.6** Toute déclaration suggérant que le Logiciel est "open source" au sens OSI.
-
----
-
-## ARTICLE 4 — CESSION DES CONTRIBUTIONS
-
-**4.1** Toute Contribution soumise au Logiciel entraîne la **cession automatique, irrévocable, perpétuelle, mondiale et à titre gratuit** de l'intégralité des droits patrimoniaux au Titulaire, conformément aux articles L.131-1 et suivants du Code de la Propriété Intellectuelle.
-
-**4.2** Cette cession comprend expressément :
-- Le droit de reproduction sur tout support.
-- Le droit de représentation par tout procédé.
-- Le droit de modification, adaptation et traduction.
-- Le droit d'exploitation commerciale sans restriction.
-
-**4.3** Le contributeur **renonce expressément** à :
-- Toute rémunération présente ou future.
-- Toute revendication de droits sur le Logiciel ou ses dérivés.
-- Tout droit de retrait ou de négociation ultérieure.
-
-**4.4** En soumettant une Contribution, le contributeur **garantit** qu'il détient les droits nécessaires pour effectuer cette cession.
-
----
-
-## ARTICLE 5 — EXCLUSION DE GARANTIE
-
-**5.1** Le Logiciel est fourni **"EN L'ÉTAT" (AS-IS)**, sans garantie d'aucune sorte, expresse ou implicite.
-
-**5.2** Le Titulaire ne garantit pas :
-- L'adéquation du Logiciel à un usage particulier.
-- L'absence de bogues, erreurs ou failles de sécurité.
-- La compatibilité avec quelque environnement que ce soit.
-- La continuité de disponibilité ou de maintenance.
-
----
-
-## ARTICLE 6 — LIMITATION DE RESPONSABILITÉ
-
-**6.1** Dans les limites autorisées par le droit français, le Titulaire ne pourra être tenu responsable de :
-- Tout dommage indirect, accessoire, spécial ou consécutif.
-- Toute perte de données, de profits ou d'exploitation.
-- Tout dommage résultant de l'utilisation ou de l'impossibilité d'utiliser le Logiciel.
-
-**6.2** L'Utilisateur reconnaît être **seul et entièrement responsable** de :
-- L'utilisation qu'il fait du Logiciel.
-- Les modifications qu'il y apporte.
-- Les conséquences de toute action réalisée avec ou grâce au Logiciel.
-- Toute activité illicite, non-éthique ou dommageable.
-
-**6.3** L'Utilisateur s'engage à **garantir, défendre et indemniser** le Titulaire contre toute réclamation, action, dommage, coût ou dépense résultant de son utilisation du Logiciel.
-
-**6.4** Note : Conformément au droit français, cette limitation ne s'applique pas aux dommages corporels ni aux cas de dol ou faute lourde du Titulaire.
-
----
-
-## ARTICLE 7 — SANCTIONS
-
-**7.1** Toute violation de la présente licence expose l'Utilisateur à :
-- La résiliation immédiate et automatique de tous les droits accordés.
-- Des poursuites civiles pour contrefaçon (art. L.335-2 CPI) : jusqu'à **3 ans d'emprisonnement** et **300 000 € d'amende**.
-- Une action en réparation du préjudice subi par le Titulaire.
-
-**7.2** Le Titulaire se réserve le droit d'exiger :
-- La cessation immédiate de l'utilisation contrefaisante.
-- La destruction de toutes les copies.
-- La publication du jugement aux frais du contrevenant.
-
----
-
-## ARTICLE 8 — DURÉE ET RÉSILIATION
-
-**8.1** Cette licence est accordée pour une durée indéterminée, tant que les conditions sont respectées.
-
-**8.2** Elle prend fin automatiquement et sans préavis en cas de violation de l'une quelconque de ses dispositions.
-
-**8.3** Le Titulaire peut modifier cette licence pour les versions futures du Logiciel. Les versions déjà distribuées restent soumises à la licence sous laquelle elles ont été obtenues.
-
----
-
-## ARTICLE 9 — DISPOSITIONS GÉNÉRALES
-
-**9.1 Intégralité** : Cette licence constitue l'intégralité de l'accord entre les parties concernant le Logiciel.
-
-**9.2 Divisibilité** : Si une disposition est jugée invalide, les autres restent en vigueur.
-
-**9.3 Renonciation** : L'absence d'exercice d'un droit ne constitue pas une renonciation à ce droit.
-
-**9.4 Droit applicable** : Droit français.
-
-**9.5 Juridiction compétente** : Tribunaux de Paris (France).
-
----
-
-## ARTICLE 10 — ACCEPTATION
-
-**En accédant au Logiciel, en le téléchargeant, en l'exécutant ou en y contribuant, l'Utilisateur reconnaît avoir lu, compris et accepté sans réserve l'intégralité des termes de cette licence.**
-
----
-
-**© 2024 Yanis (@yanix2445) — Tous droits réservés.**  
-**Logiciel propriétaire à code source visible — Usage non-commercial uniquement.**
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
