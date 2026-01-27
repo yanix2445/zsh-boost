@@ -1,21 +1,98 @@
-MIT License
+# LICENCE D'UTILISATION NON-COMMERCIALE STRICTE
 
-Copyright (c) 2024 Yanis
+**Version 1.0 - Janvier 2024**  
+**Auteur et Titulaire des Droits : Yanis (@yanix2445)**
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+---
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+## 1. DÉFINITIONS
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+- **"Projet"** : L'ensemble du code source, documentation, scripts et ressources contenus dans ce dépôt.
+- **"Auteur"** : Yanis (@yanix2445), créateur et unique titulaire des droits sur ce Projet.
+- **"Utilisateur"** : Toute personne physique ou morale qui clone, télécharge, modifie, utilise ou distribue le Projet.
+- **"Usage Commercial"** : Toute utilisation directe ou indirecte du Projet à des fins lucratives, incluant mais non limité à : la vente, la location, l'intégration dans un produit payant, l'utilisation dans un contexte professionnel rémunéré, ou toute forme de monétisation.
+
+---
+
+## 2. DROITS ACCORDÉS
+
+Sous réserve du respect strict des conditions de cette licence, l'Utilisateur est autorisé à :
+
+- ✅ Cloner et télécharger le Projet pour un usage **strictement personnel et non-commercial**.
+- ✅ Modifier le code pour ses propres besoins **personnels et non-commerciaux**.
+- ✅ Partager le Projet **dans son intégralité**, licence incluse, sans modification de cette licence.
+- ✅ Contribuer au Projet via des pull requests (les contributions deviennent la propriété de l'Auteur).
+
+---
+
+## 3. INTERDICTIONS FORMELLES
+
+**IL EST STRICTEMENT ET FORMELLEMENT INTERDIT DE :**
+
+- ❌ **Commercialiser** le Projet sous quelque forme que ce soit.
+- ❌ **Vendre**, louer, ou monnayer l'accès au Projet ou à ses dérivés.
+- ❌ **Intégrer** le Projet dans un produit ou service commercial.
+- ❌ **Utiliser** le Projet dans un cadre professionnel générant des revenus sans accord écrit préalable de l'Auteur.
+- ❌ **Retirer** ou modifier cette licence.
+- ❌ **Prétendre** être l'auteur ou le propriétaire du Projet.
+
+**Toute violation de ces interdictions constitue une infraction aux droits de l'Auteur et expose le contrevenant à des poursuites judiciaires civiles et pénales.**
+
+---
+
+## 4. CLAUSE DE NON-RESPONSABILITÉ ABSOLUE
+
+**L'AUTEUR SE DÉGAGE DE TOUTE RESPONSABILITÉ, SANS EXCEPTION NI LIMITATION.**
+
+Le Projet est fourni **"TEL QUEL" (AS-IS)**, sans aucune garantie d'aucune sorte, expresse ou implicite.
+
+**L'Auteur ne peut en aucun cas être tenu responsable de :**
+
+- 🚫 Tout dommage direct, indirect, accidentel, spécial ou consécutif résultant de l'utilisation du Projet.
+- 🚫 Toute perte de données, corruption de système, ou dysfonctionnement matériel.
+- 🚫 Toute utilisation malveillante, illégale ou non-éthique du Projet par un Utilisateur.
+- 🚫 Toute action de piratage, intrusion, ou activité criminelle réalisée avec le Projet.
+- 🚫 Toute conséquence juridique découlant des actions d'un Utilisateur.
+
+**L'Utilisateur assume l'entière et exclusive responsabilité de ses actes.**  
+En utilisant ce Projet, l'Utilisateur accepte de **dégager, défendre et indemniser l'Auteur** contre toute réclamation, poursuite, dommage ou coût.
+
+**Aucune action en justice, réclamation, ou mise en cause de quelque nature que ce soit ne peut être intentée contre l'Auteur.**
+
+---
+
+## 5. SANCTIONS ET RECOURS LÉGAUX
+
+**En cas de violation de cette licence, notamment en cas de commercialisation non-autorisée :**
+
+- ⚖️ L'Auteur se réserve le droit d'engager des **poursuites judiciaires civiles et pénales**.
+- 💰 L'Auteur peut réclamer des **dommages et intérêts** proportionnels au préjudice subi.
+- 🔒 L'Auteur peut exiger le **retrait immédiat** de tout usage non-conforme.
+- 📜 Les frais de justice seront à la charge exclusive du contrevenant.
+
+---
+
+## 6. CARACTÈRE PERPÉTUEL ET IRRÉVOCABLE
+
+Cette licence s'applique **à vie** pour toutes les versions du Projet, sauf décision contraire de l'Auteur.
+
+Seul l'Auteur (Yanis) peut modifier, remplacer ou révoquer cette licence pour les versions futures.  
+Les versions déjà distribuées sous cette licence restent soumises à ses termes.
+
+---
+
+## 7. DROIT APPLICABLE
+
+Cette licence est régie par le **droit français**.  
+Tout litige sera soumis à la compétence exclusive des **tribunaux français**.
+
+---
+
+## 8. ACCEPTATION
+
+**En clonant, téléchargeant, ou utilisant ce Projet, l'Utilisateur reconnaît avoir lu, compris et accepté l'intégralité des termes de cette licence.**
+
+---
+
+**© 2024 Yanis (@yanix2445) - Tous droits réservés.**  
+**Projet Open Source à usage strictement non-commercial.**
