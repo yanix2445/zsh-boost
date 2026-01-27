@@ -1,1 +1,2 @@
-# Custom config example
+# Put your custom variables and aliases here
+# This file is ignored by git (cp local/custom.zsh.example local/custom.zsh)
