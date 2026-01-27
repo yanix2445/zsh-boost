@@ -22,7 +22,7 @@ fi
 # │   grep "pattern"      → Cherche dans tous les fichiers                     │
 # │   grep "TODO" -t js   → Cherche seulement dans les .js                     │
 # └─────────────────────────────────────────────────────────────────────────────┘
-command -v rg &>/dev/null && alias grep="rg"
+command -v rg &>/dev/null && alias grep="rg --color=always"
 
 # ┌─────────────────────────────────────────────────────────────────────────────┐
 # │ FD - find ultra-rapide                                                      │
