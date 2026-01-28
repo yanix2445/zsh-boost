@@ -61,17 +61,34 @@ cd zsh-boost && ./install.sh
 <div align="center">
 
 ```mermaid
-graph LR
-    A[".zshrc"] --> B["config.zsh"]
-    B --> C["Modules"]
-    A --> D["local/custom.zsh"]
+flowchart LR
+    %% Nodes
+    Main((".zshrc"))
+    Config("config.zsh")
+    Modules{"Modules"}
+    Local("local/custom.zsh")
     
-    C --> E["aliases/"]
-    C --> F["utils/"]
+    Aliases["aliases/"]
+    Utils["utils/"]
 
-    style A fill:#16a085,stroke:#fff,color:#fff
-    style B fill:#3498db,stroke:#fff,color:#fff
-    style D fill:#f39c12,stroke:#fff,color:#fff
+    %% Flow
+    Main --> Config
+    Config --> Modules
+    Main --> Local
+    
+    Modules --> Aliases
+    Modules --> Utils
+
+    %% Styles
+    style Main fill:#16a085,stroke:#fff,color:#fff,stroke-width:2px
+    style Config fill:#3498db,stroke:#fff,color:#fff,stroke-width:2px
+    style Local fill:#f39c12,stroke:#fff,color:#fff,stroke-width:2px
+    style Modules fill:#2c3e50,stroke:#fff,color:#fff,stroke-width:2px
+    
+    style Aliases fill:#95a5a6,stroke:#fff,color:#fff,stroke-width:1px
+    style Utils fill:#95a5a6,stroke:#fff,color:#fff,stroke-width:1px
+
+    linkStyle default stroke:#bdc3c7,stroke-width:2px
 ```
 
 </div>
