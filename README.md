@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://bashlogo.com/img/symbol/png/full_colored_light.png" alt="Bash Logo" width="80" align="center"/> <img src="https://capsule-render.vercel.app/api?type=waving&color=16a085&height=200&section=header&text=ZSH%20BOOST&fontSize=80&animation=fadeIn&fontAlignY=35" width="80%" align="center"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=16a085&height=250&section=header&text=ZSH%20BOOST&fontSize=80&animation=fadeIn&fontAlignY=35&reClue=true&logo=gnubash&logoColor=white&logoSize=60" width="100%"/>
 
 <br/>
 
