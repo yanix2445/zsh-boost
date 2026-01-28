@@ -157,35 +157,13 @@ ZSH_MODULES=(
 
 ## 🛠️ Personnalisation
 
-<div align="center">
-
-```mermaid
-graph LR
-    A["💡 Idée"] --> B["📝 local/custom.zsh"]
-    B --> C{"✅ OK ?"}
-    C -->|Oui| D["📦 modules/"]
-    D --> E["🎛️ config.zsh"]
-    E --> F["⚡ rld"]
-    C -->|Non| B
-
-    style A fill:#9b59b6,color:#fff
-    style B fill:#f39c12,color:#fff
-    style C fill:#3498db,color:#fff
-    style D fill:#27ae60,color:#fff
-    style E fill:#16a085,color:#fff
-    style F fill:#e74c3c,color:#fff
-```
-
-</div>
-
-<br/>
-
-| Étape | Fichier | Action |
-|:-----:|:--------|:-------|
-| 📝 | `local/custom.zsh` | Teste ici — **ignoré par Git** |
-| 📦 | `modules/aliases/` `modules/utils/` | Crée ton module permanent |
-| 🎛️ | `config.zsh` | Ajoute au tableau `ZSH_MODULES` |
-| ⚡ | Terminal | Tape `rld` pour activer |
+> ** Teste** → `local/custom.zsh` *(ignoré par Git)*
+>
+> **📦 Crée** → `modules/aliases/` ou `modules/utils/`
+>
+> **🎛️ Active** → Ajoute dans `config.zsh`
+>
+> **⚡ Recharge** → `rld`
 
 <br/>
 
