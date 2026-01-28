@@ -285,7 +285,7 @@ exec zsh
 <div align="center">
 
 <a href="https://github.com/yanix2445">
-<img src="https://capsule-render.vercel.app/api?type=waving&color=16a085&height=150&section=footer&text=Made%20with%20💚%20by%20@yanix2445&fontSize=20&fontColor=ffffff&fontAlign=50&fontAlignY=50" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&height=170&color=gradient&text=Made%20with%20%F0%9F%92%9A%20by%20@yanix2445&fontSize=20&fontAlign=50&fontAlignY=73&section=footer" width="100%"/>
 </a>
 
 </div>
