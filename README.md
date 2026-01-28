@@ -159,31 +159,50 @@ ZSH_MODULES=(
 
 <div align="center">
 
+```
+💡 Idée  ──▶  📝 Test  ──▶  ✅ Valide  ──▶  📦 Module  ──▶  🚀 Actif
+```
+
+<br/>
+
 <table>
 <tr>
-<td width="33%" align="center">
+<td align="center">
 
-### 1️⃣ Teste
+### 📝 Sandbox
 
-`local/custom.zsh`
+```zsh
+# local/custom.zsh
+alias test="echo 'ça marche!'"
+```
 
-*Ignoré par Git*
-
-</td>
-<td width="33%" align="center">
-
-### 2️⃣ Crée
-
-`modules/aliases/`
-`modules/utils/`
+**Jamais commité** 🔒
 
 </td>
-<td width="33%" align="center">
+<td align="center">
 
-### 3️⃣ Active
+### 📦 Module
 
-Ajoute dans
-`config.zsh`
+```zsh
+# modules/aliases/custom.zsh
+alias mon="ma-commande"
+```
+
+**Réutilisable** ♻️
+
+</td>
+<td align="center">
+
+### 🚀 Activation
+
+```zsh
+# config.zsh
+ZSH_MODULES=(
+    aliases/custom
+)
+```
+
+**Tape `rld`** ⚡
 
 </td>
 </tr>
