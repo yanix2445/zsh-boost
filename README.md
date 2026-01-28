@@ -1,16 +1,14 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=250&section=header&text=ZSH%20BOOST&fontSize=90&animation=fadeIn&fontAlignY=38&desc=Faster.%20Smarter.%20Better.&descAlignY=55&descSize=20" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=16a085&height=200&section=header&animation=fadeIn" width="100%"/>
+
+# <img src="https://bashlogo.com/img/symbol/png/full_colored_light.png" alt="Bash Logo" width="60" align="center"/> ZSH BOOST
+
+[![macOS](https://img.shields.io/badge/OS-macOS%20Tahoe-000000?style=for-the-badge&logo=apple&logoColor=white)](https://github.com/yanix2445/zsh-boost)
+[![License](https://img.shields.io/badge/License-Apache%202.0-27ae60?style=for-the-badge&logo=apache-software-foundation&logoColor=white)](LICENSE)
+[![Creator](https://img.shields.io/badge/Author-@yanix2445-16a085?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yanis)
 
 <br/>
-
-[![macOS](https://img.shields.io/badge/macOS-26%20Tahoe-000000?style=for-the-badge&logo=apple&logoColor=white)](https://github.com/yanix2445/zsh-boost)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue?style=for-the-badge)](LICENSE)
-[![Author](https://img.shields.io/badge/By-@yanix2445-0ea5e9?style=for-the-badge&logo=github)](https://github.com/yanis)
-
-<br/>
-
-<img src="https://bashlogo.com/img/symbol/png/full_colored_light.png" alt="Bash Logo" width="60"/>
 
 ### 🚀 L'expérience ultime du terminal macOS
 
