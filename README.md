@@ -284,8 +284,8 @@ exec zsh
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=16a085&height=100&section=footer" width="100%"/>
-
 **Made with 💚 by [@yanix2445](https://github.com/yanix2445)**
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=16a085&height=100&section=footer" width="100%"/>
 
 </div>
