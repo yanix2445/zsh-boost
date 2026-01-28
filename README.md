@@ -25,8 +25,6 @@
 
 <br/>
 
----
-
 <br/>
 
 ## ⚡ Installation
@@ -108,8 +106,6 @@ flowchart LR
 
 <br/>
 
----
-
 <br/>
 
 ## 🎛️ Configuration
@@ -168,8 +164,6 @@ ZSH_MODULES=(
 
 <br/>
 
----
-
 <br/>
 
 ## 🛠️ Personnalisation
@@ -177,8 +171,6 @@ ZSH_MODULES=(
 <div align="center">
 
 <i>Choisis ton approche pour étendre ZSH Boost</i>
-
-<br/>
 
 ```mermaid
 flowchart TD
@@ -200,9 +192,6 @@ flowchart TD
     linkStyle 0 stroke:#f39c12,stroke-width:2px,stroke-dasharray: 5 5
     linkStyle 1 stroke:#16a085,stroke-width:3px
 ```
-
-<br/>
-
 <table>
 <tr>
 <td width="50%" valign="top">
@@ -242,8 +231,6 @@ Crée un module propre dans `modules/` et active-le dans `config.zsh`.
 
 <br/>
 
----
-
 <br/>
 
 ## 🚨 Dépannage
@@ -266,8 +253,6 @@ rm -rf ~/.zcompdump* && exec zsh
 </details>
 
 <br/>
-
----
 
 <br/>
 
