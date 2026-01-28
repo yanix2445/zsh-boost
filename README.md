@@ -2,8 +2,6 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=16a085&height=200&section=header&text=ZSH%20BOOST&fontSize=80&fontColor=ffffff&fontAlignY=40&animation=fadeIn" width="100%"/>
 
-<img src="https://bashlogo.com/img/symbol/png/full_colored_light.png" alt="Bash Logo" width="70"/>
-
 <br/>
 
 [![macOS](https://img.shields.io/badge/OS-macOS%20Tahoe-000000?style=for-the-badge&logo=apple&logoColor=white)](https://github.com/yanix2445/zsh-boost)
@@ -18,13 +16,23 @@
 
 ---
 
-## 📚 Table des Matières
-- [⚡ Installation](#-installation)
-- [🏗️ Architecture](#️-architecture)
-- [🎛️ Configuration](#️-configuration)
-- [🛠️ Personnalisation](#️-personnalisation)
-- [🚨 Dépannage](#-dépannage)
-- [📜 Licence](#-licence)
+<details open>
+<summary><h2>📚 Navigation Rapide</h2></summary>
+
+<div align="center">
+
+| | Section | Description |
+|:---:|:---|:---|
+| ⚡ | [**Installation**](#-installation) | Prêt en 1 minute |
+| 🏗️ | [**Architecture**](#️-architecture-smart) | Structure du projet |
+| 🎛️ | [**Configuration**](#️-configuration-granulaire) | Activer/désactiver les modules |
+| 🛠️ | [**Personnalisation**](#️-personnalisation) | Ajouter tes propres outils |
+| 🚨 | [**Dépannage**](#-dépannage) | Résoudre les problèmes |
+| 📜 | [**Licence**](#-licence) | Apache 2.0 |
+
+</div>
+
+</details>
 
 ---
 
