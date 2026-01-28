@@ -61,18 +61,19 @@ cd zsh-boost && ./install.sh
 ```mermaid
 flowchart LR
     %% Nodes
-    Main((".zshrc"))
-    Config("config.zsh")
-    Modules{"Modules"}
-    Local("local/custom.zsh")
+    Main([".zshrc"])
+    Config(["config.zsh"])
+    Modules{{"Modules"}}
     
-    Aliases["aliases/"]
-    Utils["utils/"]
+    Local(["local/custom.zsh"])
+    
+    Aliases[["aliases/"]]
+    Utils[["utils/"]]
 
     %% Flow
-    Main --> Config
-    Config --> Modules
-    Main --> Local
+    Main ==>|Source| Config
+    Config ==>|Load| Modules
+    Main -.->|Optional| Local
     
     Modules --> Aliases
     Modules --> Utils
@@ -80,13 +81,15 @@ flowchart LR
     %% Styles
     style Main fill:#16a085,stroke:#fff,color:#fff,stroke-width:2px
     style Config fill:#3498db,stroke:#fff,color:#fff,stroke-width:2px
-    style Local fill:#f39c12,stroke:#fff,color:#fff,stroke-width:2px
+    style Local fill:#f39c12,stroke:#fff,color:#fff,stroke-width:2px,stroke-dasharray: 5 5
     style Modules fill:#2c3e50,stroke:#fff,color:#fff,stroke-width:2px
     
     style Aliases fill:#95a5a6,stroke:#fff,color:#fff,stroke-width:1px
     style Utils fill:#95a5a6,stroke:#fff,color:#fff,stroke-width:1px
 
-    linkStyle default stroke:#bdc3c7,stroke-width:2px
+    linkStyle 0,1 stroke:#16a085,stroke-width:3px
+    linkStyle 2 stroke:#f39c12,stroke-width:2px,stroke-dasharray: 5 5
+    linkStyle 3,4 stroke:#bdc3c7,stroke-width:2px
 ```
 
 </div>
