@@ -231,30 +231,53 @@ Crée un module propre dans `modules/` et active-le dans `config.zsh`.
 
 <br/>
 
-<br/>
-
 ## 🚨 Dépannage
 
-| Problème | Solution |
-|:---------|:---------|
-| Icônes `□□□` | Installer **FiraCode Nerd Font** |
-| Commande introuvable | Vérifier `config.zsh` puis `rld` |
-| Terminal lent | Désactiver les modules inutilisés |
+<div align="center">
 
-<br/>
+<table>
+<tr>
+<td width="60%" valign="top">
 
-<details>
-<summary><strong>🔧 Réinitialisation</strong></summary>
+### ❓ Problèmes Courants
+
+| Symptôme | Solution Rapide |
+|:---|:---|
+| **Icônes Cassées** `□□` | Installer [**Nerdfonts**](https://www.nerdfonts.com/) |
+| **Commande introuvable** | Lancer `rld` pour recharger |
+| **Terminal Lent** | Désactiver modules lourds (git) |
+| **Erreur Syntax** | Vérifier vos `"` et `()` |
+
+</td>
+<td width="5%"></td>
+<td width="35%" valign="top">
+
+### ⚡ Actions
+
+**Un souci persistant ?**
+Réinitialise le cache de complétion ZSH.
+
+<br>
 
 ```bash
-rm -rf ~/.zcompdump* && exec zsh
+# Force Rebuild
+rm -rf ~/.zcompdump*
+exec zsh
 ```
 
-</details>
+<br>
 
-<br/>
+> <span style="color:#f39c12">⚠️ <b>Note :</b></span> Cela ne supprime pas ta configuration, juste le cache.
 
-<br/>
+</td>
+</tr>
+</table>
+
+</div>
+
+<br>
+
+<br>
 
 <div align="center">
 
