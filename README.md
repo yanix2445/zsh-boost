@@ -71,9 +71,9 @@ flowchart LR
     Utils[["utils/"]]
 
     %% Flow
-    Main ==>|Source| Config
-    Config ==>|Load| Modules
-    Main -.->|Optional| Local
+    Main ==>|   Source   | Config
+    Config ==>|   Load   | Modules
+    Main -.->|   Optional   | Local
     
     Modules --> Aliases
     Modules --> Utils
