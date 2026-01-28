@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=16a085&height=250&section=header&text=ZSH%20BOOST&fontSize=80&animation=fadeIn&fontAlignY=35&reClue=true&logo=gnubash&logoColor=white&logoSize=60" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=16a085&height=250&section=header&text=ZSH%20BOOST&fontSize=80&fontAlignY=40&logo=gnubash&logoSize=50&logoColor=white&logoAlignY=40&animation=fadeIn" width="100%"/>
 
 <br/>
 
