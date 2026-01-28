@@ -157,52 +157,31 @@ ZSH_MODULES=(
 
 ## 🛠️ Personnalisation
 
-<table width="100%">
-<tr>
-<td width="50%" align="center">
-<br/>
-
-### 🧪 Mode "Bac à Sable"
-*Pour tes tests et secrets*
-
-`local/custom.zsh`
-
-> 🙈 **Ignoré par Git**
-> <br/>Parfait pour tes tokens & tests
-
-```zsh
-export API_KEY="sk-..."
-alias test="echo 'WIP'"
-```
-
-</td>
-<td width="50%" align="center">
-<br/>
-
-### 🚀 Mode "Production"
-*Pour tes outils durables*
-
-`modules/aliases/`
-
-> ✅ **Versionné**
-> <br/>Ton code propre et partagé
-
-```zsh
-# modules/aliases/perso.zsh
-alias work="cd ~/Projets"
-```
-
-</td>
-</tr>
-</table>
-
 <div align="center">
 
+<details open>
+<summary><h3>🎯 Je veux juste bidouiller</h3></summary>
 <br/>
 
-**⚡ Pour activer tes modules Pro :**
+> **Fichier :** `local/custom.zsh`
+>
+> � **Privé** : Tes changements ne seront jamais envoyés sur GitHub.
+> <br/>
+> 🔑 **Use case** : Clés API, alias temporaires, tests.
+
+</details>
+
+<details>
+<summary><h3>🚀 Je veux créer un module durable</h3></summary>
 <br/>
-Ajoute simplement `aliases/perso` dans **`config.zsh`** et tape `rld`.
+
+> **Fichier :** Crée `modules/aliases/mon-module.zsh`
+>
+> 🌍 **Public** : Ton code est versionné et propre.
+> <br/>
+> ✨ **Activation** : Ajoute `aliases/mon-module` dans `config.zsh`.
+
+</details>
 
 </div>
 
