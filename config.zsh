@@ -4,30 +4,55 @@
 # ║  🎯 C'EST LE SEUL FICHIER QUE TU DOIS MODIFIER                              ║
 # ║                                                                              ║
 # ║  Ici tu contrôles :                                                         ║
-# ║    • Quels modules sont actifs                                              ║
+# ║    • Quels modules sont actifs (commenté = désactivé)                       ║
 # ║    • Le thème Oh My Zsh                                                     ║
 # ║    • Les plugins à charger                                                  ║
+# ║                                                                              ║
+# ║  Après modification : recharge avec "rld" ou "exec zsh"                     ║
 # ╚══════════════════════════════════════════════════════════════════════════════╝
 
 # ┌─────────────────────────────────────────────────────────────────────────────┐
 # │ MODULES ACTIFS                                                              │
 # │                                                                              │
 # │ Commenté (#) = désactivé    |    Décommenté = actif                        │
-# │                                                                              │
-# │ Après modification : recharge avec "exec zsh" ou "rld"                     │
-# Fichier de configuration principal
-# Charge tous les modules dans l'ordre défini
-# Ne modifiez pas l'ordre de chargement !
-
-# 1. Variables d'environnement (Chargées automatiquement par le loader .zshrc)
-# source "$ZSH_CONFIG/core/00-env.zsh" <-- SUPPRIMÉ (Redondant et buggé)
 # └─────────────────────────────────────────────────────────────────────────────┘
 
 typeset -a ZSH_MODULES
 ZSH_MODULES=(
-    core/omz         # 🔒 Système : Oh My Zsh + plugins
-    aliases/_loader  # ✅ Aliases : navigation, search, etc.
-    utils/_loader    # ✅ Fonctions : fkill, ports, myip, etc.
+    # ┌───────────────────────────────────────────────────────────────────────┐
+    # │ 🔒 CORE (Ne pas désactiver)                                           │
+    # └───────────────────────────────────────────────────────────────────────┘
+    core/omz                    # Oh My Zsh + plugins
+
+    # ┌───────────────────────────────────────────────────────────────────────┐
+    # │ 🔀 ALIASES — Raccourcis de commandes                                  │
+    # └───────────────────────────────────────────────────────────────────────┘
+    aliases/navigation          # ls, ll, lt, .., cls, rld (eza + zoxide)
+    aliases/search              # grep, find, cat (rg + fd + bat + fzf)
+    aliases/git                 # glog, gundo (extensions au plugin git)
+    aliases/docker              # d, dps, dc, dcu, dcd...
+    aliases/npm                 # ni, nd, nb, nt, nclean
+    aliases/pnpm                # p, pi, pa, pd, pb, pt
+    aliases/bun                 # b, bi, ba, br, bd, bb, bt
+    aliases/rust                # c, cb, cr, ct, cc, cu, cn
+    aliases/nextjs              # nxt, next-dev, next-build...
+
+    # ┌───────────────────────────────────────────────────────────────────────┐
+    # │ 🛠️ UTILS — Fonctions utilitaires                                      │
+    # └───────────────────────────────────────────────────────────────────────┘
+    utils/mkcd                  # mkcd <dir> : créer et entrer dans un dossier
+    utils/myip                  # myip : afficher IP locale et publique
+    utils/backup                # bak <fichier> : backup horodaté
+    utils/trash                 # trash <fichier> : envoyer à la corbeille
+    utils/copy                  # copy <fichier> : copier contenu au clipboard
+    utils/json                  # json : formater JSON (pipe ou fichier)
+    utils/qr                    # qr "texte" : générer QR code ASCII
+    utils/gitignore             # gi <template> : générer .gitignore
+    utils/extract               # extract <archive> : décompresser tout format
+    utils/serve                 # serve [port] : serveur HTTP local
+    utils/ports                 # ports : lister les ports ouverts
+    utils/fkill                 # fkill [pattern] : tuer un processus (fzf)
+    utils/update                # up : mise à jour globale du système
 )
 
 # ┌─────────────────────────────────────────────────────────────────────────────┐

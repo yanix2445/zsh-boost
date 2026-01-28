@@ -7,7 +7,6 @@
 # ╚══════════════════════════════════════════════════════════════════════════════╝
 
 # 1. Définir la racine de la configuration
-# 1. Définir la racine de la configuration
 # Note: Au démarrage du shell, $0 est le nom du shell ("-zsh"), pas le script.
 # On déduit le chemin via le lien symbolique ~/.zshrc
 if [[ -L "${HOME}/.zshrc" ]]; then
@@ -25,7 +24,7 @@ done
 # 3. Charger la configuration utilisateur (choix des modules, thèmes)
 [[ -f "$ZDOTDIR/config.zsh" ]] && source "$ZDOTDIR/config.zsh"
 
-# 4. Charger les modules activés
+# 4. Charger les modules activés (définis dans ZSH_MODULES)
 if (( ${#ZSH_MODULES} )); then
     for module in $ZSH_MODULES; do
         local module_file="$ZDOTDIR/modules/${module}.zsh"
