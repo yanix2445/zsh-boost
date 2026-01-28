@@ -118,24 +118,30 @@ ZSH_MODULES=(
 <tr>
 <td>
 
+### 🛠️ Utils
+
+| Commande | Description |
+|:---------|:------------|
+| `myip` | IP locale/publique |
+| `mkcd` | Créer + entrer dossier |
+| `bak` | Backup horodaté |
+| `trash` | Corbeille sécurisée |
+| `ports` | Ports ouverts |
+| `up` | Mise à jour système |
+
+</td>
+<td>
+
+### 🔀 Aliases
+
 | Commande | Description |
 |:---------|:------------|
 | `ll` | Liste avec icônes |
 | `grep` | Recherche (ripgrep) |
 | `cat` | Affichage coloré |
-| `myip` | IP locale/publique |
-| `mkcd` | Créer + entrer dossier |
-
-</td>
-<td>
-
-| Commande | Description |
-|:---------|:------------|
-| `bak` | Backup horodaté |
-| `trash` | Corbeille sécurisée |
-| `ports` | Ports ouverts |
-| `up` | Mise à jour système |
 | `rld` | Recharger la config |
+| `..` | Remonter d'un niveau |
+| `cls` | Effacer le terminal |
 
 </td>
 </tr>
