@@ -191,8 +191,8 @@ flowchart TD
     style Module fill:#16a085,stroke:#fff,color:#fff,stroke-width:2px
 
     %% Paths
-    New -->|🧪 Test / Privé| Labo("local/custom.zsh")
-    New -->|🧱 Feature solide| Module("modules/...")
+    New -->| 🧪 Test / Privé | Labo("local/custom.zsh")
+    New -->| 🧱 Feature solide | Module("modules/...")
     
     %% Styling Links
     linkStyle default stroke:#bdc3c7,stroke-width:2px
