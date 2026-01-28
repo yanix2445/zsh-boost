@@ -184,18 +184,21 @@ ZSH_MODULES=(
 flowchart TD
     %% Nodes
     New(("💡 Nouvelle Idée"))
-    
+    Labo(["🧪 Labo (Privé)"])
+    Module(["🧱 Module (Public)"])
+
     %% Styles
     style New fill:#2c3e50,stroke:#fff,color:#fff,stroke-width:2px
     style Labo fill:#f39c12,stroke:#fff,color:#fff,stroke-width:2px
     style Module fill:#16a085,stroke:#fff,color:#fff,stroke-width:2px
 
     %% Paths
-    New -->| 🧪 Test / Privé | Labo("local/custom.zsh")
-    New -->| 🧱 Feature solide | Module("modules/...")
+    New -.->| Test rapide | Labo
+    New ==>| Feature solide | Module
     
-    %% Styling Links
-    linkStyle default stroke:#bdc3c7,stroke-width:2px
+    %% Semantic Link Styles
+    linkStyle 0 stroke:#f39c12,stroke-width:2px,stroke-dasharray: 5 5
+    linkStyle 1 stroke:#16a085,stroke-width:3px
 ```
 
 <br/>
