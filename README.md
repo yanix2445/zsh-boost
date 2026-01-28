@@ -157,18 +157,54 @@ ZSH_MODULES=(
 
 ## 🛠️ Personnalisation
 
-> ** Teste** → `local/custom.zsh` *(ignoré par Git)*
->
-> **📦 Crée** → `modules/aliases/` ou `modules/utils/`
->
-> **🎛️ Active** → Ajoute dans `config.zsh`
->
-> **⚡ Recharge** → `rld`
+<table width="100%">
+<tr>
+<td width="50%" align="center">
+<br/>
+
+### 🧪 Mode "Bac à Sable"
+*Pour tes tests et secrets*
+
+`local/custom.zsh`
+
+> 🙈 **Ignoré par Git**
+> <br/>Parfait pour tes tokens & tests
+
+```zsh
+export API_KEY="sk-..."
+alias test="echo 'WIP'"
+```
+
+</td>
+<td width="50%" align="center">
+<br/>
+
+### 🚀 Mode "Production"
+*Pour tes outils durables*
+
+`modules/aliases/`
+
+> ✅ **Versionné**
+> <br/>Ton code propre et partagé
+
+```zsh
+# modules/aliases/perso.zsh
+alias work="cd ~/Projets"
+```
+
+</td>
+</tr>
+</table>
+
+<div align="center">
 
 <br/>
 
-> [!TIP]
-> **Secrets ?** Mets tes tokens API dans `local/custom.zsh` — jamais commité.
+**⚡ Pour activer tes modules Pro :**
+<br/>
+Ajoute simplement `aliases/perso` dans **`config.zsh`** et tape `rld`.
+
+</div>
 
 <br/>
 
