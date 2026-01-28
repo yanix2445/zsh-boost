@@ -1,8 +1,10 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=16a085&height=200&section=header&animation=fadeIn" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=16a085&height=250&section=header&text=ZSH%20BOOST&fontSize=90&animation=fadeIn&fontAlignY=35" width="100%"/>
 
-# <img src="https://bashlogo.com/img/symbol/png/full_colored_light.png" alt="Bash Logo" width="60" align="center"/> ZSH BOOST
+<br/>
+
+<img src="https://bashlogo.com/img/symbol/png/full_colored_light.png" alt="Bash Logo" width="60" style="margin-top: -100px;"/>
 
 [![macOS](https://img.shields.io/badge/OS-macOS%20Tahoe-000000?style=for-the-badge&logo=apple&logoColor=white)](https://github.com/yanix2445/zsh-boost)
 [![License](https://img.shields.io/badge/License-Apache%202.0-27ae60?style=for-the-badge&logo=apache-software-foundation&logoColor=white)](LICENSE)
