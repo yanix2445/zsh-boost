@@ -8,9 +8,9 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/yanix2445/zsh-boost"><img src="https://img.shields.io/badge/macOS-Tahoe-000000?style=for-the-badge&logo=apple&logoColor=white" alt="macOS Tahoe"/></a>
+  <a href="https://github.com/yanix2445/zsh-boost"><img src="https://img.shields.io/badge/macOS-14+-000000?style=for-the-badge&logo=apple&logoColor=white" alt="macOS 14+"/></a>
   <a href="https://www.zsh.org/"><img src="https://img.shields.io/badge/ZSH-5.9+-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white" alt="ZSH 5.9+"/></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-Non--Commercial-red?style=for-the-badge" alt="License"/></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-blue?style=for-the-badge" alt="Apache 2.0"/></a>
   <a href="https://github.com/yanix2445"><img src="https://img.shields.io/badge/by-@yanix2445-0ea5e9?style=for-the-badge&logo=github&logoColor=white" alt="by @yanix2445"/></a>
 </p>
 
@@ -23,9 +23,9 @@
 - [⚡ Installation](#-installation)
 - [🎯 C'est quoi ce projet ?](#-cest-quoi-ce-projet-)
 - [🏗️ Structure du Projet](#️-structure-du-projet)
-- [🚦 Niveaux d'Accès](#-niveaux-daccès)
-- [🛠️ Comment Personnaliser](#️-comment-personnaliser)
+- [🎛️ Configuration des Modules](#️-configuration-des-modules)
 - [📋 Commandes Disponibles](#-commandes-disponibles)
+- [🛠️ Personnalisation](#️-personnalisation)
 - [🚨 Problèmes Fréquents](#-problèmes-fréquents)
 
 ---
@@ -40,7 +40,7 @@ cd zsh-boost && ./install.sh
 > [!TIP]
 > **C'est tout !** L'installateur s'occupe de TOUT :
 > - Installe Homebrew si manquant
-> - Installe les outils CLI modernes
+> - Installe les outils CLI modernes (eza, bat, fd, ripgrep, fzf, zoxide, gum)
 > - Installe la police Nerd Font
 > - Configure le symlink `.zshrc`
 > - Ouvre un nouveau terminal et c'est prêt 🎉
@@ -62,7 +62,7 @@ cd zsh-boost && ./install.sh
 - ✅ Une config ZSH prête à l'emploi
 - ✅ Des outils modernes préconfigurés
 - ✅ Une architecture scalable pour tes ajouts
-- ✅ Un installateur interactif
+- ✅ Un système de modules activables/désactivables
 
 ---
 
@@ -71,108 +71,198 @@ cd zsh-boost && ./install.sh
 ```
 zsh-boost/
 ├── .zshrc              # Point d'entrée (charge tout)
-├── config.zsh          # 🎛️ TON fichier de config
+├── config.zsh          # 🎛️ TON fichier de config (modules, thème, plugins)
 │
-├── core/               # 🔒 Système (env, path, options)
+├── core/               # 🔒 Système (ne pas modifier)
 │
 ├── modules/
-│   ├── core/           # 🔒 Plugins Oh My Zsh
+│   ├── core/           # 🔒 Oh My Zsh
 │   │   └── omz.zsh
 │   │
-│   ├── aliases/        # ✅ Tes aliases
-│   │   ├── _loader.zsh
-│   │   ├── navigation.zsh
-│   │   ├── search.zsh
-│   │   └── (tes futurs aliases...)
+│   ├── aliases/        # ✅ Raccourcis de commandes
+│   │   ├── navigation.zsh   # ls, ll, .., cls, rld
+│   │   ├── search.zsh       # grep, find, cat
+│   │   ├── git.zsh          # glog, gundo
+│   │   ├── docker.zsh       # d, dps, dc...
+│   │   ├── npm.zsh          # ni, nd, nb...
+│   │   ├── pnpm.zsh         # p, pi, pa...
+│   │   ├── bun.zsh          # b, bi, ba...
+│   │   ├── rust.zsh         # c, cb, cr...
+│   │   └── nextjs.zsh       # nxt, next-dev...
 │   │
-│   └── utils/          # ✅ Tes fonctions
-│       ├── _loader.zsh
-│       ├── fkill.zsh
-│       ├── ports.zsh
-│       ├── myip.zsh
-│       └── (tes futures fonctions...)
+│   └── utils/          # ✅ Fonctions utilitaires
+│       ├── mkcd.zsh         # Créer + entrer dossier
+│       ├── myip.zsh         # Infos IP
+│       ├── backup.zsh       # Backup horodaté
+│       ├── trash.zsh        # Corbeille sécurisée
+│       ├── copy.zsh         # Copier au clipboard
+│       ├── json.zsh         # Formater JSON
+│       ├── qr.zsh           # Générer QR code
+│       ├── gitignore.zsh    # Générer .gitignore
+│       ├── extract.zsh      # Décompresser archives
+│       ├── serve.zsh        # Serveur HTTP local
+│       ├── ports.zsh        # Lister ports ouverts
+│       ├── fkill.zsh        # Tuer processus (fzf)
+│       └── update.zsh       # Mise à jour système
 │
 ├── local/
-│   └── custom.zsh      # 🔥 TON bac à sable (ignoré par Git)
+│   └── custom.zsh      # 🔥 TON espace perso (ignoré par Git)
 │
 └── install.sh          # Installateur interactif
 ```
 
 ---
 
-## 🚦 Niveaux d'Accès
+## 🎛️ Configuration des Modules
 
-### ⛔ JAMAIS TOUCHER
+### Le fichier `config.zsh`
 
-> [!CAUTION]
-> **Ces fichiers sont le MOTEUR du système. Les modifier = tout casser.**
+C'est le **seul fichier que tu dois modifier** pour contrôler ta configuration.
 
-| Fichier | Rôle |
-|:--------|:-----|
-| `.zshrc` | Point d'entrée, charge tout |
-| `core/` | Variables système, PATH, options ZSH |
-| `modules/core/omz.zsh` | Configuration Oh My Zsh |
-| `modules/*/_loader.zsh` | Auto-chargeurs des modules |
+```zsh
+# config.zsh
 
----
+typeset -a ZSH_MODULES
+ZSH_MODULES=(
+    core/omz                    # 🔒 Oh My Zsh (toujours actif)
 
-### 🟡 RAREMENT (avec précaution)
+    # ALIASES
+    aliases/navigation          # ls, ll, lt, .., cls, rld
+    aliases/search              # grep, find, cat
+    aliases/git                 # glog, gundo
+    aliases/docker              # d, dps, dc...
+    # aliases/npm               # ← DÉSACTIVÉ (commenté)
+    aliases/pnpm                # p, pi, pa...
+    
+    # UTILS
+    utils/myip                  # myip
+    utils/backup                # bak
+    # utils/fkill               # ← DÉSACTIVÉ (commenté)
+)
+```
 
-> [!WARNING]
-> **Modifie ces fichiers seulement si tu sais ce que tu fais.**
+### Activer / Désactiver un module
 
-| Fichier | Quand modifier |
-|:--------|:---------------|
-| `config.zsh` | Changer le thème, activer/désactiver des modules |
-| `install.sh` | Ajouter des dépendances à installer |
-
----
-
-### 🟢 DE TEMPS EN TEMPS
-
-> [!NOTE]
-> **Ces fichiers sont faits pour être modifiés. C'est là que tu personnalises.**
-
-| Fichier | Usage |
-|:--------|:------|
-| `modules/aliases/*.zsh` | Ajouter/modifier des aliases |
-| `modules/utils/*.zsh` | Ajouter/modifier des fonctions |
-
----
-
-### 🔥 TOUT LE TEMPS
+| Action | Comment faire |
+|--------|---------------|
+| **Désactiver** | Ajoute `#` devant la ligne |
+| **Activer** | Retire le `#` devant la ligne |
+| **Appliquer** | Tape `rld` ou `exec zsh` |
 
 > [!TIP]
-> **C'est TON espace. Fais ce que tu veux ici !**
-
-| Fichier | Usage |
-|:--------|:------|
-| `local/custom.zsh` | Tests, tokens secrets, alias temporaires |
-
-**Ce fichier est ignoré par Git.** Tu peux y mettre :
-- Tes clés API (`GITHUB_TOKEN`, `OPENAI_API_KEY`)
-- Tes alias expérimentaux
-- Tes fonctions en cours de dev
+> Tu peux désactiver les modules dont tu n'as pas besoin pour accélérer le démarrage du terminal.
 
 ---
 
-## 🛠️ Comment Personnaliser
+## 📋 Commandes Disponibles
+
+### Navigation (aliases/navigation)
+
+| Commande | Action |
+|:---------|:-------|
+| `ls` | Liste avec icônes (eza) |
+| `ll` | Liste détaillée + git status |
+| `la` | Liste avec fichiers cachés |
+| `lt` | Vue en arbre (2 niveaux) |
+| `..` / `...` / `....` | Remonter 1/2/3 niveaux |
+| `cls` | Effacer le terminal |
+| `rld` | Recharger la configuration |
+
+### Recherche (aliases/search)
+
+| Commande | Action |
+|:---------|:-------|
+| `grep <pattern>` | Recherche ultra-rapide (ripgrep) |
+| `find <pattern>` | Recherche de fichiers (fd) |
+| `cat <fichier>` | Affiche avec coloration (bat) |
+| <kbd>Ctrl</kbd>+<kbd>R</kbd> | Historique des commandes (fzf) |
+| <kbd>Ctrl</kbd>+<kbd>T</kbd> | Recherche de fichiers (fzf) |
+
+### Git (aliases/git)
+
+| Commande | Action |
+|:---------|:-------|
+| `glog` | Log git graphique coloré |
+| `gundo` | Annuler le dernier commit (soft) |
+
+### Docker (aliases/docker)
+
+| Commande | Action |
+|:---------|:-------|
+| `d` | docker |
+| `dps` | docker ps |
+| `dpsa` | docker ps -a |
+| `dim` | docker images |
+| `dc` | docker-compose |
+| `dcu` | docker-compose up -d |
+| `dcd` | docker-compose down |
+| `dcl` | docker-compose logs -f |
+
+### Package Managers
+
+| Alias | NPM | PNPM | Bun |
+|:------|:----|:-----|:----|
+| install | `ni` | `pi` | `bi` |
+| add | — | `pa` | `ba` |
+| dev | `nd` | `pd` | `bd` |
+| build | `nb` | `pb` | `bb` |
+| test | `nt` | `pt` | `bt` |
+| run | — | `pr` | `br` |
+
+### Rust (aliases/rust)
+
+| Commande | Action |
+|:---------|:-------|
+| `c` | cargo |
+| `cb` | cargo build |
+| `cr` | cargo run |
+| `ct` | cargo test |
+| `cc` | cargo check |
+
+### Utilitaires
+
+| Commande | Action |
+|:---------|:-------|
+| `mkcd <dir>` | Créer et entrer dans un dossier |
+| `myip` | Afficher IP locale et publique |
+| `bak <fichier>` | Créer un backup horodaté |
+| `trash <fichier>` | Envoyer à la corbeille (sécurisé) |
+| `copy <fichier>` | Copier le contenu au clipboard |
+| `json` | Formater du JSON (pipe ou fichier) |
+| `qr "texte"` | Générer un QR code ASCII |
+| `gi <template>` | Générer un .gitignore |
+| `extract <archive>` | Décompresser tout format |
+| `serve [port]` | Lancer un serveur HTTP local |
+| `ports` | Lister les ports ouverts (interactif) |
+| `fkill [pattern]` | Tuer un processus (interactif) |
+| `up` | Mise à jour globale du système |
+
+---
+
+## 🛠️ Personnalisation
 
 ### Ajouter un alias
 
 1. **Crée** un fichier dans `modules/aliases/`
    ```bash
-   touch modules/aliases/docker.zsh
+   touch modules/aliases/monalias.zsh
    ```
 
 2. **Écris** tes aliases
    ```zsh
-   # modules/aliases/docker.zsh
-   alias dc="docker-compose"
-   alias dps="docker ps"
+   # modules/aliases/monalias.zsh
+   alias ma="mon-alias"
    ```
 
-3. **C'est chargé automatiquement !** Tape `rld` pour recharger.
+3. **Ajoute** le module dans `config.zsh`
+   ```zsh
+   ZSH_MODULES=(
+       ...
+       aliases/monalias    # ← Ajoute cette ligne
+   )
+   ```
+
+4. **Recharge** avec `rld`
 
 ---
 
@@ -180,28 +270,36 @@ zsh-boost/
 
 1. **Crée** un fichier dans `modules/utils/`
    ```bash
-   touch modules/utils/hello.zsh
+   touch modules/utils/mafonction.zsh
    ```
 
 2. **Écris** ta fonction
    ```zsh
-   # modules/utils/hello.zsh
-   hello() {
+   # modules/utils/mafonction.zsh
+   mafonction() {
        echo "👋 Hello, $1!"
    }
    ```
 
-3. **C'est chargé automatiquement !** Tape `rld` pour recharger.
+3. **Ajoute** le module dans `config.zsh`
+   ```zsh
+   ZSH_MODULES=(
+       ...
+       utils/mafonction    # ← Ajoute cette ligne
+   )
+   ```
+
+4. **Recharge** avec `rld`
 
 ---
 
 ### Tester sans risque
 
 > [!TIP]
-> **Utilise `local/custom.zsh` pour tester avant de créer un fichier officiel.**
+> **Utilise `local/custom.zsh` pour tester avant de créer un module officiel.**
 
 ```zsh
-# local/custom.zsh
+# local/custom.zsh (ignoré par Git)
 
 # Test d'un alias
 alias test_alias="echo 'ça marche!'"
@@ -210,55 +308,11 @@ alias test_alias="echo 'ça marche!'"
 test_func() {
     echo "Ma super fonction"
 }
+
+# Variables secrètes
+export GITHUB_TOKEN="ghp_xxxx"
+export OPENAI_API_KEY="sk-xxxx"
 ```
-
-Si ça marche → Crée un fichier dans `aliases/` ou `utils/`.
-Si ça casse → Supprime et tape `rld`.
-
----
-
-## 📋 Commandes Disponibles
-
-### Navigation
-
-| Commande | Action |
-|:---------|:-------|
-| `cd <dossier>` | Navigation intelligente (fuzzy match) |
-| `ll` | Liste détaillée avec icônes |
-| `la` | Liste avec fichiers cachés |
-| `lt` | Vue en arbre |
-| `..` / `...` / `....` | Remonter 1/2/3 niveaux |
-
-### Recherche
-
-| Commande | Action |
-|:---------|:-------|
-| <kbd>Ctrl</kbd>+<kbd>R</kbd> | Historique des commandes |
-| <kbd>Ctrl</kbd>+<kbd>T</kbd> | Recherche de fichiers |
-| `grep <pattern>` | Recherche de texte |
-| `find <pattern>` | Recherche de fichiers |
-| `cat <fichier>` | Affiche avec coloration |
-
-### Utilitaires
-
-| Commande | Action |
-|:---------|:-------|
-| `fkill` | Tueur de processus interactif |
-| `ports` | Gestionnaire de ports |
-| `myip` | Infos IP locale/publique |
-| `fkill` | Tuer un processus (menu) |
-| `ports` | Voir/Tuer ports ouverts |
-| `extract` | Dézipper n'importe quoi |
-| `mkcd` | Créer + entrer dossier |
-| `up` | Mise à jour globale |
-| `serve` | Serveur Web instantané |
-| `gi` | Générateur .gitignore |
-| `bak` | Backup rapide (.bak) |
-| `trash` | Suppression safe (corbeille) |
-| `qr` | Générateur QR Code |
-| `json` | Formateur JSON coloré |
-| `copy` | Copie fichier vers clipboard |
-| `rld` | Recharge la configuration |
 
 ---
 
@@ -267,9 +321,9 @@ Si ça casse → Supprime et tape `rld`.
 | Problème | Solution |
 |:---------|:---------|
 | Icônes cassées `□□□` | Configure **FiraCode Nerd Font** dans ton terminal |
-| `rld` introuvable | Lance `./install.sh` → "Configurer Symlink" |
-| Terminal lent | Vérifie que Starship est installé |
 | Commande pas reconnue | Tape `rld` pour recharger |
+| Terminal lent | Désactive les modules inutilisés dans `config.zsh` |
+| Module introuvable | Vérifie le chemin dans `config.zsh` (sans `.zsh`) |
 
 <details>
 <summary><strong>🔧 Réinitialisation Complète</strong></summary>
@@ -292,10 +346,25 @@ rm -rf ~/.zcompdump*
 
 | Requis | Version |
 |:-------|:--------|
-| macOS | 26+ (Tahoe) |
-| Zsh | Latest |
+| macOS | 14+ (Sonoma) |
+| Zsh | 5.9+ |
 | Homebrew | Latest |
 | Git | 2.x |
+
+---
+
+## 📜 Licence
+
+Ce projet est sous licence [Apache 2.0](LICENSE).
+
+Tu peux librement :
+- ✅ Utiliser, modifier et distribuer
+- ✅ Utiliser commercialement
+- ✅ Breveter tes modifications
+
+À condition de :
+- 📝 Conserver les notices de copyright
+- 📝 Indiquer les modifications effectuées
 
 ---
 
@@ -303,7 +372,6 @@ rm -rf ~/.zcompdump*
 
 *Made with ❤️ by [@yanix2445](https://github.com/yanix2445)*
 
-</div>
+🚀 **ZSH Boost** — Booste ton terminal !
 
----
-*Configuration propulsée par Zsh Boost 🚀*
+</div>
