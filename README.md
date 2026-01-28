@@ -78,12 +78,16 @@ graph LR
 
 <br/>
 
+<div align="center">
+
 | Fichier | Accès | Rôle |
 |:--------|:-----:|:-----|
 | `.zshrc` | ⛔ | Point d'entrée — **ne pas modifier** |
 | `config.zsh` | 🎛️ | **Ta configuration** — modules, thème, plugins |
 | `modules/` | ✏️ | Aliases et utils activables |
 | `local/custom.zsh` | 🔥 | **Ton espace** — ignoré par Git |
+
+</div>
 
 <br/>
 
@@ -110,18 +114,32 @@ ZSH_MODULES=(
 
 <div align="center">
 
+<table>
+<tr>
+<td>
+
 | Commande | Description |
 |:---------|:------------|
-| `ll` | Liste avec icônes et git status |
-| `grep` | Recherche ultra-rapide (ripgrep) |
-| `cat` | Affichage coloré (bat) |
-| `myip` | IP locale et publique |
+| `ll` | Liste avec icônes |
+| `grep` | Recherche (ripgrep) |
+| `cat` | Affichage coloré |
+| `myip` | IP locale/publique |
 | `mkcd` | Créer + entrer dossier |
+
+</td>
+<td>
+
+| Commande | Description |
+|:---------|:------------|
 | `bak` | Backup horodaté |
 | `trash` | Corbeille sécurisée |
-| `ports` | Ports ouverts (interactif) |
+| `ports` | Ports ouverts |
 | `up` | Mise à jour système |
 | `rld` | Recharger la config |
+
+</td>
+</tr>
+</table>
 
 </div>
 
