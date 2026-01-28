@@ -193,8 +193,8 @@ flowchart TD
     style Module fill:#16a085,stroke:#fff,color:#fff,stroke-width:2px
 
     %% Paths
-    New -.->| Test rapide | Labo
-    New ==>| Feature solide | Module
+    New -.->|   Test rapide   | Labo
+    New ==>|   Feature solide   | Module
     
     %% Semantic Link Styles
     linkStyle 0 stroke:#f39c12,stroke-width:2px,stroke-dasharray: 5 5
