@@ -164,13 +164,21 @@ ZSH_MODULES=(
 <br/>
 
 ```mermaid
-graph TD
-    New[💡 Nouvelle Idée] -->|🧪 Test rapide / Privé| Labo(local/custom.zsh)
-    New -->|🧱 Feature solide| Module(modules/...)
+flowchart TD
+    %% Nodes
+    New(("💡 Nouvelle Idée"))
     
-    style Labo fill:#f39c12,stroke:#fff,color:#fff
-    style Module fill:#16a085,stroke:#fff,color:#fff
-    style New stroke:#7f8c8d
+    %% Styles
+    style New fill:#2c3e50,stroke:#fff,color:#fff,stroke-width:2px
+    style Labo fill:#f39c12,stroke:#fff,color:#fff,stroke-width:2px
+    style Module fill:#16a085,stroke:#fff,color:#fff,stroke-width:2px
+
+    %% Paths
+    New -->|🧪 Test / Privé| Labo("local/custom.zsh")
+    New -->|🧱 Feature solide| Module("modules/...")
+    
+    %% Styling Links
+    linkStyle default stroke:#bdc3c7,stroke-width:2px
 ```
 
 <br/>
