@@ -56,10 +56,6 @@ cd zsh-boost && ./install.sh
 
 <br/>
 
----
-
-<br/>
-
 ## 🏗️ Architecture
 
 <div align="center">
@@ -137,6 +133,8 @@ ZSH_MODULES=(
 
 ## 🛠️ Personnalisation
 
+<div align="center">
+
 <table>
 <tr>
 <td width="33%" align="center">
@@ -166,6 +164,8 @@ Ajoute dans
 </td>
 </tr>
 </table>
+
+</div>
 
 <br/>
 
