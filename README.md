@@ -2,126 +2,225 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=16a085&height=200&section=header&text=ZSH%20BOOST&fontSize=80&fontColor=ffffff&fontAlignY=40&animation=fadeIn" width="100%"/>
 
-<br/>
-
 [![macOS](https://img.shields.io/badge/OS-macOS%20Tahoe-000000?style=for-the-badge&logo=apple&logoColor=white)](https://github.com/yanix2445/zsh-boost)
 [![License](https://img.shields.io/badge/License-Apache%202.0-27ae60?style=for-the-badge)](LICENSE)
 [![Author](https://img.shields.io/badge/Author-@yanix2445-16a085?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yanis)
 
-<br/>
-
-### 🚀 L'expérience ultime du terminal macOS
-
 </div>
 
----
-
-<details open>
-<summary><h2>📚 Navigation Rapide</h2></summary>
+<br/>
 
 <div align="center">
 
 | | Section | Description |
 |:---:|:---|:---|
 | ⚡ | [**Installation**](#-installation) | Prêt en 1 minute |
-| 🏗️ | [**Architecture**](#️-architecture-smart) | Structure du projet |
-| 🎛️ | [**Configuration**](#️-configuration-granulaire) | Activer/désactiver les modules |
-| 🛠️ | [**Personnalisation**](#️-personnalisation) | Ajouter tes propres outils |
+| 🏗️ | [**Architecture**](#-architecture) | Structure du projet |
+| 🎛️ | [**Configuration**](#-configuration) | Activer/désactiver les modules |
+| 🛠️ | [**Personnalisation**](#-personnalisation) | Créer tes propres outils |
 | 🚨 | [**Dépannage**](#-dépannage) | Résoudre les problèmes |
 | 📜 | [**Licence**](#-licence) | Apache 2.0 |
 
 </div>
 
-</details>
+<br/>
 
 ---
+
+<br/>
 
 ## ⚡ Installation
 
-Une seule commande pour transformer votre terminal :
+<table>
+<tr>
+<td>
 
 ```zsh
-git clone https://github.com/yanix2445/zsh-boost.git && cd zsh-boost && ./install.sh
+git clone https://github.com/yanix2445/zsh-boost.git
+cd zsh-boost && ./install.sh
 ```
 
-> [!TIP]
-> **Zsh Boost** installe automatiquement vos dépendances via Homebrew (eza, bat, fd, rg, fzf, zoxide) et configure la police Nerd Font pour un affichage optimal.
+</td>
+<td width="50%">
+
+**L'installateur configure tout :**
+
+- ✅ Homebrew (si manquant)
+- ✅ Outils CLI modernes
+- ✅ Police Nerd Font
+- ✅ Symlink `.zshrc`
+
+</td>
+</tr>
+</table>
+
+<br/>
 
 ---
 
-## 🏗️ Architecture Smart
+<br/>
 
-Le projet est conçu pour être à la fois **robuste** (core protégé) et **flexible** (modules interchangeables).
-
-```mermaid
-graph TD
-    A[".zshrc"] --> B{"Config Loader"}
-    B --> C["Core (Read Only)"]
-    B --> D["Modules (Auto-load)"]
-    B --> E["Local (Custom)"]
-    
-    subgraph "Modules Layer"
-    D --> D1["Aliases"]
-    D --> D2["Utils"]
-    end
-    
-    style A fill:#0ea5e9,stroke:#fff,stroke-width:2px,color:#fff
-    style C fill:#64748b,stroke:#fff,color:#fff
-    style E fill:#f59e0b,stroke:#fff,color:#fff
-```
-
----
-
-## 🎛️ Configuration Granulaire
-
-Le fichier `config.zsh` est votre centre de contrôle. Activez ou désactivez les fonctionnalités en une seule ligne.
-
-### 🔥 Le Top 10 des Features (Confondu)
-
-| Type | Commande | Description |
-| :--- | :--- | :--- |
-| 🐚 | `ll` | Liste enrichie (eza) avec icônes et git status |
-| 🔍 | `grep` | Recherche ultra-rapide via Ripgrep |
-| 📦 | `up` | Mise à jour globale (System, Brew, OMZ) |
-| 🌐 | `myip` | Affiche instantanément vos IPs (Local/Public) |
-| 📁 | `mkcd` | Crée un dossier et s'y déplace immédiatement |
-| 🧹 | `trash` | Suppression sécurisée vers la corbeille macOS |
-| 📄 | `cat` | Lecture avec coloration syntaxique (bat) |
-| 🛠️ | `ports` | Visualisation interactive des ports occupés |
-| 💾 | `bak` | Création de backup horodaté en un clic |
-| 🔄 | `rld` | Rechargement à chaud de votre configuration |
-
----
-
-## 🛠️ Personnalisation
-
-Le système respecte votre flux de travail :
-
-1.  **Tests Rapides** : Utilisez `local/custom.zsh` pour vos expérimentations (ignoré par Git).
-2.  **Modules Dédiés** : Ajoutez vos fichiers `.zsh` dans `modules/aliases/` ou `modules/utils/`.
-3.  **Activation** : Déclarez-les simplement dans le tableau `ZSH_MODULES` de votre `config.zsh`.
-
-> [!IMPORTANT]
-> Ne modifiez jamais le dossier `core/` pour garantir la compatibilité avec les futures mises à jour du moteur.
-
----
-
-## 🚨 Dépannage
-
-| Symptôme | Solution |
-| :--- | :--- |
-| **Icônes manquantes** | Assurez-vous d'utiliser une **Nerd Font** (FiraCode recommandée). |
-| **Commandes non trouvées** | Vérifiez que le module est bien décommenté dans `config.zsh`. |
-| **Lenteur** | Lancez `up` pour optimiser les caches de complétion. |
-
----
-
-## 📜 Licence
-
-Distribué sous la licence **Apache 2.0**. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
+## 🏗️ Architecture
 
 <div align="center">
 
-**[ZSH Boost](https://github.com/yanix2445/zsh-boost) — Propulsé par la passion du code.**
+```mermaid
+graph LR
+    A[".zshrc"] --> B["config.zsh"]
+    B --> C["Modules"]
+    A --> D["local/custom.zsh"]
+    
+    C --> E["aliases/"]
+    C --> F["utils/"]
+
+    style A fill:#16a085,stroke:#fff,color:#fff
+    style B fill:#3498db,stroke:#fff,color:#fff
+    style D fill:#f39c12,stroke:#fff,color:#fff
+```
+
+</div>
+
+<br/>
+
+| Fichier | Accès | Rôle |
+|:--------|:-----:|:-----|
+| `.zshrc` | ⛔ | Point d'entrée — **ne pas modifier** |
+| `config.zsh` | 🎛️ | **Ta configuration** — modules, thème, plugins |
+| `modules/` | ✏️ | Aliases et utils activables |
+| `local/custom.zsh` | 🔥 | **Ton espace** — ignoré par Git |
+
+<br/>
+
+---
+
+<br/>
+
+## 🎛️ Configuration
+
+Modifie `config.zsh` pour activer ou désactiver les modules :
+
+```zsh
+ZSH_MODULES=(
+    core/omz              # 🔒 Oh My Zsh
+    aliases/navigation    # ✅ Actif
+    # aliases/docker      # ❌ Désactivé
+    utils/myip            # ✅ Actif
+)
+```
+
+<br/>
+
+### 🔥 Top Features
+
+<div align="center">
+
+| Commande | Description |
+|:---------|:------------|
+| `ll` | Liste avec icônes et git status |
+| `grep` | Recherche ultra-rapide (ripgrep) |
+| `cat` | Affichage coloré (bat) |
+| `myip` | IP locale et publique |
+| `mkcd` | Créer + entrer dossier |
+| `bak` | Backup horodaté |
+| `trash` | Corbeille sécurisée |
+| `ports` | Ports ouverts (interactif) |
+| `up` | Mise à jour système |
+| `rld` | Recharger la config |
+
+</div>
+
+<br/>
+
+---
+
+<br/>
+
+## 🛠️ Personnalisation
+
+<table>
+<tr>
+<td width="33%" align="center">
+
+### 1️⃣ Teste
+
+`local/custom.zsh`
+
+*Ignoré par Git*
+
+</td>
+<td width="33%" align="center">
+
+### 2️⃣ Crée
+
+`modules/aliases/`
+`modules/utils/`
+
+</td>
+<td width="33%" align="center">
+
+### 3️⃣ Active
+
+Ajoute dans
+`config.zsh`
+
+</td>
+</tr>
+</table>
+
+<br/>
+
+> [!TIP]
+> **Secrets ?** Mets tes tokens API dans `local/custom.zsh` — jamais commité.
+
+<br/>
+
+---
+
+<br/>
+
+## 🚨 Dépannage
+
+| Problème | Solution |
+|:---------|:---------|
+| Icônes `□□□` | Installer **FiraCode Nerd Font** |
+| Commande introuvable | Vérifier `config.zsh` puis `rld` |
+| Terminal lent | Désactiver les modules inutilisés |
+
+<br/>
+
+<details>
+<summary><strong>🔧 Réinitialisation</strong></summary>
+
+```bash
+rm -rf ~/.zcompdump* && exec zsh
+```
+
+</details>
+
+<br/>
+
+---
+
+<br/>
+
+## 📜 Licence
+
+<div align="center">
+
+**Apache 2.0** — Libre d'utilisation, modification et distribution.
+
+[📄 Voir la licence](LICENSE)
+
+</div>
+
+<br/>
+
+---
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=16a085&height=100&section=footer" width="100%"/>
+
+**Made with 💚 by [@yanix2445](https://github.com/yanix2445)**
 
 </div>
