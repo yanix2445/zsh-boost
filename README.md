@@ -60,8 +60,16 @@ cd zsh-boost && ./install.sh
 
 <div align="center">
 
+<i>Vue d'ensemble des flux de configuration</i>
+
+<br/>
+
+<table>
+<tr>
+<td width="45%" valign="center">
+
 ```mermaid
-flowchart LR
+flowchart TD
     %% Nodes
     Main((".zshrc"))
     Config("config.zsh")
@@ -72,9 +80,9 @@ flowchart LR
     Utils["utils/"]
 
     %% Flow
-    Main --> Config
-    Config --> Modules
-    Main --> Local
+    Main -->|Source| Config
+    Config -->|Load| Modules
+    Main -.->|Optional| Local
     
     Modules --> Aliases
     Modules --> Utils
@@ -91,18 +99,26 @@ flowchart LR
     linkStyle default stroke:#bdc3c7,stroke-width:2px
 ```
 
-</div>
+</td>
+<td width="5%"></td>
+<td width="50%" valign="top">
 
-<br/>
+### 🧭 Guide des fichiers
 
-<div align="center">
+| Fichier | Rôle & Actions |
+|:---|:---|
+| <span style="color:#16a085">**.zshrc**</span> | **Intouchable** <br> Le point d'entrée du shell. |
+| <span style="color:#3498db">**config.zsh**</span> | **Ta Config** <br> Active/Désactive les modules ici. |
+| <span style="color:#2c3e50">**modules/**</span> | **La Librairie** <br> Tous les outils (aliases, utils). |
+| <span style="color:#f39c12">**local/**</span> | **Ton Espace** <br> Ignoré par Git. Pour tes secrets. |
 
-| Fichier | Accès | Rôle |
-|:--------|:-----:|:-----|
-| `.zshrc` | ⛔ | Point d'entrée — **ne pas modifier** |
-| `config.zsh` | 🎛️ | **Ta configuration** — modules, thème, plugins |
-| `modules/` | ✏️ | Aliases et utils activables |
-| `local/custom.zsh` | 🔥 | **Ton espace** — ignoré par Git |
+<br>
+
+> **Note :** ZSH Boost sépare clairement le code public (modules) de tes configurations privées (local).
+
+</td>
+</tr>
+</table>
 
 </div>
 
