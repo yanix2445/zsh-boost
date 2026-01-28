@@ -159,29 +159,56 @@ ZSH_MODULES=(
 
 <div align="center">
 
-<details open>
-<summary><h3>🎯 Je veux juste bidouiller</h3></summary>
+<i>Choisis ton approche pour étendre ZSH Boost</i>
+
 <br/>
 
-> **Fichier :** `local/custom.zsh`
->
-> � **Privé** : Tes changements ne seront jamais envoyés sur GitHub.
-> <br/>
-> 🔑 **Use case** : Clés API, alias temporaires, tests.
+```mermaid
+graph TD
+    New[💡 Nouvelle Idée] -->|🧪 Test rapide / Privé| Labo(local/custom.zsh)
+    New -->|🧱 Feature solide| Module(modules/...)
+    
+    style Labo fill:#f39c12,stroke:#fff,color:#fff
+    style Module fill:#16a085,stroke:#fff,color:#fff
+    style New stroke:#7f8c8d
+```
 
-</details>
-
-<details>
-<summary><h3>🚀 Je veux créer un module durable</h3></summary>
 <br/>
 
-> **Fichier :** Crée `modules/aliases/mon-module.zsh`
->
-> 🌍 **Public** : Ton code est versionné et propre.
-> <br/>
-> ✨ **Activation** : Ajoute `aliases/mon-module` dans `config.zsh`.
+<table>
+<tr>
+<td width="50%" valign="top">
 
-</details>
+### 🧪 Le Labo
+**Pour tes secrets & tests**
+
+Tout ce que tu mets dans `local/custom.zsh` reste sur ta machine (GitIgnored).
+
+<br/>
+
+> **Parfait pour :**
+> - 🔑 Tokens & Clés API
+> - 🗑️ Alias jetables
+> - 🚧 Tests en vrac
+
+</td>
+<td width="50%" valign="top">
+
+### 🧱 L'Atelier
+**Pour tes outils durables**
+
+Crée un module propre dans `modules/` et active-le dans `config.zsh`.
+
+<br/>
+
+> **Workflow :**
+> 1. 📝 Créer `modules/aliases/mon-outil.zsh`
+> 2. 🔌 Ajouter `aliases/mon-outil` dans `config.zsh`
+> 3. ♻️ Lancer `rld`
+
+</td>
+</tr>
+</table>
 
 </div>
 
