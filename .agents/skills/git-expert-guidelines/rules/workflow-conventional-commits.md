@@ -14,9 +14,14 @@ type(scope): description courte (max 50 chars)
 [Footer] Références (Issues, Breaking Changes)
 ```
 
-1.  **Header**: `type(scope): description` (Obligatoire, max 50 caractères)
-2.  **Body**: Explication du *Pourquoi* et du *Comment*. Pas un roman, aller à l'essentiel. (Obligatoire).
+1.  **Header**: `type(scope): description` (Obligatoire, max 50 caractères, **EN FRANÇAIS**).
+2.  **Body**: Explication du *Pourquoi* et du *Comment*. Pas un roman, aller à l'essentiel. (Obligatoire, **EN FRANÇAIS**).
 3.  **Footer**: Références tickets (ex: `Fixes #123`) ou `BREAKING CHANGE`. (Obligatoire).
+
+## Langue
+
+**FRANÇAIS UNIQUEMENT.**
+L'anglais est interdit dans les messages de commit, sauf pour les termes techniques intraduisibles (e.g. "breaking change", "bug fix", "workflow").
 
 ## Types autorisés
 

@@ -100,28 +100,31 @@ Utiliser la convention [Conventional Commits](https://www.conventionalcommits.or
 **Structure Obligatoire :**
 
 ```text
-type(scope): description courte (max 50 chars)
+type(scope): description courte (max 50 chars, EN FRANÇAIS)
 
-[Body] Pourquoi & Comment (max 72 chars/ligne)
+[Body] Pourquoi & Comment (max 72 chars/ligne, EN FRANÇAIS)
 
 [Footer] Références (ex: Fixes #123)
 ```
 
+**Langue :** FRANÇAIS EXCLUSIVEMENT (sauf termes techniques).
+
 **Types autorisés :** `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `chore`.
 
-**Incorrect: incomplet ou vague**
+**Incorrect: incomplet, vague ou en anglais**
 
 ```bash
 git commit -m "fix login"
+git commit -m "fix(auth): fixed the login bug"
 ```
 
-**Correct: structure complète**
+**Correct: structure complète et en français**
 
 ```text
-fix(auth): handle null token in session refresh
+fix(auth): gestion du token null lors du refresh
 
-The session refresh logic crashed when token was null.
-Added a null check to prevent the 500 error loop.
+La logique de rafraîchissement plantait quand le token était null.
+Ajout d'une vérification pour éviter la boucle d'erreur 500.
 
 Fixes #142
 ```
