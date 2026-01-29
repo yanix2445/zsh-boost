@@ -41,3 +41,6 @@ fi
 
 # bun completions
 [ -s "/Users/yanis/.bun/_bun" ] && source "/Users/yanis/.bun/_bun"
+
+# Added by Antigravity
+export PATH="/Users/yanis/.antigravity/antigravity/bin:$PATH"
