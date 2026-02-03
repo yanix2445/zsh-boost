@@ -36,6 +36,7 @@ ZSH_MODULES=(
     aliases/bun                 # b, bi, ba, br, bd, bb, bt
     aliases/rust                # c, cb, cr, ct, cc, cu, cn
     aliases/nextjs              # nxt, next-dev, next-build...
+    aliases/claude              # cl, clup, cld, clv
 
     # ┌───────────────────────────────────────────────────────────────────────┐
     # │ 🛠️ UTILS — Fonctions utilitaires                                      │
